@@ -4,15 +4,15 @@ const employeelogin = () => {
    return (
        
     <div className="app">
-    <div class="flex items-center min-h-screen p-6 bg-gray-50 dark:bg-gray-900">
+    <div className="flex items-center min-h-screen p-6 bg-gray-50 dark:bg-gray-900">
 
-<div class="flex flex-col overflow-y-auto md:flex-row">
+<div className="flex flex-col overflow-y-auto md:flex-row">
 
 
 
-<div class=" ">
+<div className=" ">
 <h1
-         class="mb-4 text-center htext font-semibold text-gray-700 dark:text-gray-200"
+         className="mb-4 text-center htext font-semibold text-gray-700 dark:text-gray-200"
        >
          Hiring <span className="text-purple-500" >Circle</span>
 
