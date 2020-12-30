@@ -1,14 +1,14 @@
 import React, { Component } from 'react'
-import './index.css';
 import { BrowserRouter as Router, Switch, Route, Redirect} from 'react-router-dom';
 import Login from './account/login';
 import Signup from './account/signup';
 import Employeelogin from './account/employeelogin';
-import  Leaverequest from './leaverequest';
-import  Leavehistory from './leavehistory';
-import  Presence from './presence';
-import  Menu from './menu';
-import  bottomtabs from './bottomtabs';
+import Leaverequest from './leaverequest';
+import Leavehistory from './leavehistory';
+import Presence from './presence';
+import Menu from './menu';
+import bottomtabs from './bottomtabs';
+import './index.css';
 
 
 export default class App extends Component {
