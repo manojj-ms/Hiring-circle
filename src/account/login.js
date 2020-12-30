@@ -1,7 +1,7 @@
  import React from 'react'
  import { BrowserRouter as Router, Switch, Route, Redirect} from 'react-router-dom';
  import { Link } from 'react-router-dom';
-
+ 
 const login = () => {
     return (
       <div className="app">
@@ -52,6 +52,7 @@ const login = () => {
              Don't have an account?<span class="text-purple-500" ><Link to='/signup' target='_blank'>Signup</Link></span>
            
          </p>
+         
   </div>
 </div>
 </div>
