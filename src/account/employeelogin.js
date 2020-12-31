@@ -6,7 +6,7 @@ const employeelogin = () => {
     <div className="app">
     <div className="flex items-center min-h-screen p-6 bg-gray-50 dark:bg-gray-900">
 
-<div className="flex flex-col overflow-y-auto md:flex-row">
+<div className="flex flex-col w-full overflow-y-auto md:flex-row">
 
 
 

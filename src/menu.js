@@ -4,8 +4,8 @@ export default function menu() {
     return (
         <div className="bg-gray-200 dark:bg-gray-200">
             
-            <div className=" bg-gray-200 dark:bg-gray-200  w-screen ">
-<div className="px-5 py-4 bg-white dark:bg-gray-900 relative shadow rounded-xl max-h-screen h-40 rounded-b-3xl  max-w-lg">
+            <div className=" bg-gray-200 dark:bg-gray-200 h-screen  w-screen ">
+<div className="px-5 py-4 bg-white dark:bg-gray-900 relative shadow rounded-xl  h-40 rounded-b-3xl  max-w-lg">
     <div className="flex justify-between mb-4">
       <div className="flex items-center">
       <div className="w-9 h-9 flex items-center justify-center bg-purple-600 rounded-full" >
@@ -88,11 +88,11 @@ export default function menu() {
   </div>
   
  
-<div class="flex items-center justify-between min-h-screen bg-gray-200 text-gray-800">
-  <div class="p-4 w-full mt-6 mb-1">
+<div class="flex items-center justify-between w-full min-h-screen  bg-gray-200 text-gray-800">
+  <div class="p-3 w-full mt-13  mb-1">
     <div class="grid grid-cols-12 gap-4">
     <div class="col-span-12 sm:col-span-6 md:col-span-3">
-        <div class="flex flex-row bg-white shadow-sm rounded-xl p-3">
+        <div class="flex flex-row bg-white shadow-sm rounded-xl p-2">
           <div class="flex items-center justify-center flex-shrink-0 h-10 w-10 rounded-xl bg-red-100 text-red-500">
             <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" ></path></svg>
           </div>
@@ -103,7 +103,7 @@ export default function menu() {
         </div>
       </div>
     <div class="col-span-12 sm:col-span-6 md:col-span-3">
-        <div class="flex flex-row bg-white shadow-sm rounded-xl p-3">
+        <div class="flex flex-row bg-white shadow-sm rounded-xl p-2">
           <div class="flex items-center justify-center flex-shrink-0 h-10 w-10 rounded-xl bg-yellow-400 ">
           <svg className="w-4 h-4 text-black" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
@@ -116,7 +116,7 @@ export default function menu() {
         </div>
       </div>
       <div class="col-span-12 sm:col-span-6 md:col-span-3">
-        <div class="flex flex-row bg-white shadow-sm rounded-xl p-3">
+        <div class="flex flex-row bg-white shadow-sm rounded-xl p-2">
           <div class="flex items-center justify-center flex-shrink-0 h-10 w-10 rounded-xl bg-red-300 ">
           <svg className="w-4 h-4 text-black" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 14l6-6m-5.5.5h.01m4.99 5h.01M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16l3.5-2 3.5 2 3.5-2 3.5 2zM10 8.5a.5.5 0 11-1 0 .5.5 0 011 0zm5 5a.5.5 0 11-1 0 .5.5 0 011 0z" />
@@ -129,7 +129,7 @@ export default function menu() {
         </div>
       </div>
       <div class="col-span-12 sm:col-span-6 md:col-span-3">
-        <div class="flex flex-row bg-white shadow-sm rounded-xl p-3">
+        <div class="flex flex-row bg-white shadow-sm rounded-xl p-2">
           <div class="flex items-center justify-center flex-shrink-0 h-10 w-10 rounded-xl bg-green-300 ">
           <svg className="w-4 h-4 text-black" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1" />

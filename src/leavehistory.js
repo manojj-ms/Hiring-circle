@@ -4,7 +4,7 @@ export default function leavehistory() {
     return (
         <div>
             
-                  <div className="bg-gray-100 p-1 flex items-space-between justify-center w-screen  md:flex-row flex-wrap">
+                  <div className="bg-gray-100 p-1 flex items-space-between justify-center w-screen h-screen md:flex-row flex-wrap">
   <div className="bg-white w-11/12 border shadow-sm px-3 mb-3 mt-3 py-2 rounded-lg max-w-lg ">
   <div className="flex flex-row justify-between  font-bold text-xs text-blue-dark  p-1">
         <p>Approved</p>
@@ -41,11 +41,11 @@ export default function leavehistory() {
       
       <span className="ml-1 font-semibold">Sick</span>
     </div>
-    <div className="flex flex-row justify-between">
-    <button className="text-gray-400 text-xs mt-2 mr-1 lh bg-gray-200 rounded-full px-2 py-1  font-semibold  ">
+    <div className="flex flex-row items-center justify-between">
+    <button className="text-gray-400 text-xs mt-2 mr-1 lh bg-gray-200 rounded-full  font-semibold  ">
     1 day
   </button>
-  <button className="text-gray-400 text-xs lh mt-2 mr-1 bg-gray-200 rounded-full px-2 py-1  font-semibold ">
+  <button className="text-gray-400 text-xs lh mt-2 mr-1 bg-gray-200 rounded-full   font-semibold ">
     Vacation leave
   </button>
   <button className="rounded-full">
@@ -101,10 +101,10 @@ export default function leavehistory() {
       <span className="ml-1 font-semibold">Sick</span>
     </div>
     <div className="flex flex-row justify-between">
-    <button className="text-gray-400 text-xs mt-2 mr-1 lh bg-gray-200 rounded-full px-2 py-1  font-semibold  ">
+    <button className="text-gray-400 text-xs mt-2 mr-1 lh bg-gray-200 rounded-full   font-semibold  ">
     1 day
   </button>
-  <button className="text-gray-400 text-xs lh mt-2 mr-1 bg-gray-200 rounded-full px-2 py-1  font-semibold ">
+  <button className="text-gray-400 text-xs lh mt-2 mr-1 bg-gray-200 rounded-full   font-semibold ">
     Vacation leave
   </button>
   <button className="rounded-full">
@@ -162,11 +162,11 @@ export default function leavehistory() {
       
       <span className="ml-1 font-semibold">Sick</span>
     </div>
-    <div className="flex flex-row justify-between">
-    <button className="text-gray-400 text-xs mt-2 mr-1 lh bg-gray-200 rounded-full px-2 py-1  font-semibold  ">
+    <div className="flex flex-row items-center justify-between  ">
+    <button className="text-gray-400 text-xs mt-2 mr-1 lh bg-gray-200 rounded-xl font-semibold p-2  ">
     1 day
   </button>
-  <button className="text-gray-400 text-xs lh mt-2 mr-1 bg-gray-200 rounded-full px-2 py-1  font-semibold ">
+  <button className="text-gray-400 text-xs lh mt-2 mr-1 bg-gray-200 rounded-xl  p-2   font-semibold ">
     Vacation leave
   </button>
   <button className="rounded-full">

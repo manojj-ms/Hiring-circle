@@ -8,7 +8,7 @@ export default function signup() {
       <div className="app">
       <div className="flex items-center min-h-screen p-6 bg-gray-50 dark:bg-gray-900">
 
-<div className="flex flex-col overflow-y-auto md:flex-row">
+<div className="flex flex-col w-full overflow-y-auto md:flex-row">
   
  
 
@@ -70,12 +70,14 @@ export default function signup() {
        </p>
     </div>
     <button className="block w-full px-4 py-2 mt-7 border-radius: 100px; font-semibold font-weight-400 text-sm font-medium leading-5 text-center text-white transition-colors duration-150 bg-purple-600 border border-transparent rounded-full bg-purple-600 hover:bg-purple-700 focus:outline-none focus:shadow-outline-purple">Sign Up</button>
-    <p className=" p-6 fon font-semibold font-weight-700  no-underline  hover:underline"
-            
-           >
-             Already have a account?<span className="text-purple-500" ><Link to='/login' target='_blank'>Login</Link></span>
-           
-         </p>
+    <p className="p-6 fon font-semibold font-weight-700  no-underline  hover:underline text-center"
+                 >
+                 Already have an account
+                 <span class="text-purple-500 ml-2" >
+                   <Link to='/signup' target='_blank'>
+                   Login</Link>
+                 </span>
+             </p>
   </div>
 </div>
 </div>

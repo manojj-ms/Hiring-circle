@@ -3,7 +3,7 @@ import React from 'react'
 export default function leaverequest() {
     return (
         <div className="app">
-           <div className="bg-gray-100 p-1 flex items-space-between justify-center w-screen  md:flex-row flex-wrap">
+           <div className="bg-gray-100 p-1 flex items-space-between justify-center w-screen min-h-screen  md:flex-row flex-wrap">
   <div className="bg-white w-11/12 border shadow-sm px-3 mb-3 mt-3 py-2 rounded-lg max-w-lg ">
     <div className="flex items-center ">
       <img className="h-12 w-12 rounded-lg" src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="" />
