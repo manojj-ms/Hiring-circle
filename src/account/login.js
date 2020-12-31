@@ -1,5 +1,19 @@
+<<<<<<< HEAD
 import React from 'react'
 import { Link } from 'react-router-dom';
+=======
+ import React from 'react'
+ import { Link } from 'react-router-dom';
+ 
+const login = () => {
+    return (
+      <div className="app">
+      <div className="flex items-center min-h-screen p-6 bg-gray-50 dark:bg-gray-900">
+
+<div className="flex flex-col overflow-y-auto md:flex-row">
+  
+ 
+>>>>>>> 180095e22874965b30c1e3ca4e619a9c025c3a9e
 
 const login = () => {
    return (
