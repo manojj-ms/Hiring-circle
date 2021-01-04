@@ -7,7 +7,7 @@ import Leaverequest from './leaverequest';
 import Leavehistory from './leavehistory';
 import Presence from './presence';
 import Menu from './menu';
-import bottomtabs from './bottomtabs';
+import Bottomtabs from './bottomtabs';
 import './index.css';
 
 
@@ -29,7 +29,7 @@ export default class App extends Component {
                  <Route exact path='/leavehistory' component={Leavehistory} />
                  <Route exact path='/presence' component={Presence} />
                  <Route exact path='/menu' component={Menu} />
-                 <Route exact path='/bottomtabs' component={bottomtabs} />
+                 <Route exact path='/bottomtabs' component={Bottomtabs} />
           </Switch>
       
     </Router>
