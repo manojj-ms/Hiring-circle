@@ -5,6 +5,14 @@ import Presence from './views/subpages/presence';
 import Menu from './views/subpages/menu';
 import Employeestab from './views/employeedashboard/tabs/employeestab'
 
+
+import EHome from './views/employer/tabs/ehome';
+import EJobs from './views/employer/tabs/ejobs';
+import Employees from './views/employer/tabs/employees';
+import EProfile from './views/employer/tabs/eprofile';
+import EReviews from './views/employer/tabs/ereviews';
+import TabLayout from './layouts/tabs';
+
 export default class App extends Component {
   render() {
     return (
@@ -25,6 +33,14 @@ export default class App extends Component {
             <Route path='/jobtab' component={Jobtab} />
             <Route path='/profiletab' component={Profiletab} />
             <Route path='/reviewstab' component={Reviewstab} />
+
+            <TabLayout path="/employer/:path?">
+              <Route path="/employer/home" component={EHome} />
+              <Route path="/employer/jobs" component={EJobs} />
+              <Route path="/employer/employees" component={Employees} />
+              <Route path="/employer/profile" component={EProfile} />
+              <Route path="/employer/reviews" component={EReviews} />
+            </TabLayout>
             
           </Switch>
         </Router>
