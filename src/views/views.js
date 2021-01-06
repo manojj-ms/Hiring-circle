@@ -8,15 +8,8 @@ import Hometab from "./employeedashboard/tabs/hometab";
 import Jobtab from "./employeedashboard/tabs/jobtab";
 import Profiletab from "./employeedashboard/tabs/profiletab";
 import Reviewstab from "./employeedashboard/tabs/reviewstab";
-
-
-
 // Sub Pages
 import Leaverequest from "./subpages/leaverequest";
 import Leavehistory from "./subpages/leavehistory";
 
-
-
-
-
-export {   Login, Signup, Employeelogin, Employeestabs, Hometab,   Jobtab, Profiletab, Reviewstab,  Leaverequest, Leavehistory, }
+export {  Login, Signup, Employeelogin, Employeestabs, Hometab,   Jobtab, Profiletab, Reviewstab,  Leaverequest, Leavehistory }
