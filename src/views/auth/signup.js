@@ -66,7 +66,7 @@ export default function signup() {
                         >
                         Already have an account
                         <span className="text-purple-500 ml-1" >
-                          <Link to='/signup' target='_blank'>
+                          <Link to='/signup'>
                           Login</Link>
                         </span>
                     </p>

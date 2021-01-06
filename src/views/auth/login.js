@@ -38,7 +38,7 @@ const login = () => {
                     <p className="p-6 fon font-semibold font-weight-700  no-underline  hover:underline text-center">
                         Don't have an account?
                         <span className="text-purple-500 ml-2" >
-                          <Link to='/signup' target='_blank'>Signup</Link>
+                          <Link to='/signup'>Signup</Link>
                         </span>
                     </p>
                   </div>
