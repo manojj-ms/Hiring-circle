@@ -4,7 +4,7 @@ export default function presence() {
   return (
     <div>
       <div className="wrapper: h-screen w-screen bg-white-400 flex items-center justify-center">
-        <div class="card: w-64    mt-10  flex flex-col items-center text-center">
+        <div className="card: w-64    mt-10  flex flex-col items-center text-center">
           <div className="w-70 h-15 bg-blue-100 rounded-lg mb-3 flex items-center mx:auto justify-start">
             <button className="rounded-fullflex flex-row justify-start ">
               <div className="flex flex-row justify-start mx:auto text-gray-400 text-xs lh mt-2   px-2 py-1 hover:bg-gray-300 font-semibold ">
