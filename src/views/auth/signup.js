@@ -1,6 +1,44 @@
-
+import React, { useState } from 'react';
+import axios from 'axios';
+import { useForm } from 'react-hook-form';
 import React from 'react'
 import { Link } from 'react-router-dom'
+
+
+const Register = (props:any) => {
+
+   
+  const { handleSubmit, register, errors } = useForm();
+  const [passShown, setPassShown] = useState(false);
+  const history = useHistory()
+
+  const onSubmit = (values:any) => {
+      if(role !== 'consumer' && role !== 'merchant') {
+          message.error('Select a user role to create account');
+          return
+      }
+      const body:RegisterRequest = {
+          name: values.name,
+          contact: values.contact,
+          email: values.email.toLowerCase(),
+          password: values.password,
+          role: role || 'consumer'
+      }
+      props.toggleLoading();
+      axios.post(`${server}authenticate/signup`, body).then((resp) => {
+          let datum = resp.data as RegisterResponse;
+          if (datum.status === "success") {
+              message.success(datum.message);
+          }else {
+              message.error(datum.message);
+          }
+          history.push('/account/login');
+          props.toggleLoading();
+      }).catch(() => {
+          message.error('Failed to connect to server, Check internet!')
+          props.toggleLoading();
+      })
+  };
 
 
 export default function signup() {

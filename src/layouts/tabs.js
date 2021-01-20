@@ -32,7 +32,7 @@ const TabLayout = ({ children }) => {
                     selected={location.pathname === "/employer/employees"}
                     icon={<Icon path={mdiAccountGroup} size={1}/>}
                     selectedIcon={<Icon path={mdiAccountGroup} size={1}/>}
-                    onPress={() => history.push('/employer/employees')}
+                    onPress={() => history.push('/employer/employees')} 
                 >
                     {children}
                 </TabBar.Item>

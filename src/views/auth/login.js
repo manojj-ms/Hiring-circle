@@ -1,6 +1,57 @@
-
+ import React, { useEffect, useState } from 'react';
  import React from 'react'
  import { Link } from 'react-router-dom';
+ import { useForm } from "react-hook-form";
+ import { useHistory } from "react-router-dom";
+ import axios from 'axios';
+
+
+ const Login = (props:any) => {
+  let params:any = useParams();
+  const [role, setRole] = useState();
+  const { handleSubmit, register, errors } = useForm();
+  const [passShown, setPassShown] = useState(false)
+  const history = useHistory();
+
+  useEffect(() => {
+      if(params.message) {
+          message.info(JSON.parse(params.message).message, 15000)
+      }
+  }, [params])
+
+  const onSubmit = (values:any) => {
+      if(role !== 'consumer' && role !== 'merchant') {
+          message.error('Select a user role to create account', 15000);
+          return
+      }
+      const body:LoginRequest = {
+          email: values.email.toLowerCase(),
+          password: values.password,
+          role: role || 'consumer'
+      }
+      props.toggleLoading();
+      axios.post(`${server}authenticate/login`, body).then((resp) => {
+          let datum = resp.data as LoginResponse;
+          if (datum.status === "success") {
+              message.success(datum.message, 15000);
+              if(role === "consumer") {
+                  props.setProfile({...datum.profile, role: 'consumer'});
+                  props.toggleLoading();
+                  history.push('/customer/profile');
+              }else if (role === "merchant"){
+                  props.setProfile({...datum.profile, role: 'merchant'});
+                  props.toggleLoading();
+                  history.push('/merchant/profile');
+              }
+          }else {
+              message.error(datum.message, 15000);
+              props.toggleLoading();
+          }
+      }).catch(() => {
+          message.error('Failed to connect to server, Check internet!', 15000)
+          props.toggleLoading();
+      })
+  };
  
 const login = () => {
     return (
@@ -13,6 +64,7 @@ const login = () => {
                   </h1>
                   <p className="mb-4  text-center fon text-gray-700 dark font-semibold font-weight-700  ">Sign in to continue</p>
                   <div className="w-5/5 mx-auto">
+                  <form onSubmit={handleSubmit(onSubmit)}>
                     <div className="flex items-center bg-white rounded  mb-4">
                         <span className="px-3">
                           <svg className="fill-current text-gray-400 w-4 h-4" xmlns="" viewBox="0 0 20 20">
@@ -41,7 +93,9 @@ const login = () => {
                           <Link to='/signup'>Signup</Link>
                         </span>
                     </p>
+                    </form>
                   </div>
+                  
               </div>
             </div>
         </div>
