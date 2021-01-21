@@ -1,47 +1,36 @@
-import React, { useState } from 'react';
+// import React, { useState } from 'react';
 import axios from 'axios';
 import { useForm } from 'react-hook-form';
 import React from 'react'
 import { Link } from 'react-router-dom'
+import { useHistory } from "react-router-dom";
 
 
-const Register = (props:any) => {
 
-   
-  const { handleSubmit, register, errors } = useForm();
-  const [passShown, setPassShown] = useState(false);
-  const history = useHistory()
 
-  const onSubmit = (values:any) => {
-      if(role !== 'consumer' && role !== 'merchant') {
-          message.error('Select a user role to create account');
-          return
+
+
+const Signup= () => {
+  const { handleSubmit} = useForm();
+       const history = useHistory()
+       const onSubmit = (values) => {
+        const body = {
+                  name: values.name,
+                  email: values.email,
+                  company_name: values.store_name,
+                  password: values.password,
+              };
+        axios.post(`http://127.0.0.1:8000/api/authenticate/signup`, body)
+            .then(res => {
+              console.log(res);
+              console.log(res.data);
+             {/*console.log(values);*/}
+              history.push('/auth/login');
+            })
+        
       }
-      const body:RegisterRequest = {
-          name: values.name,
-          contact: values.contact,
-          email: values.email.toLowerCase(),
-          password: values.password,
-          role: role || 'consumer'
-      }
-      props.toggleLoading();
-      axios.post(`${server}authenticate/signup`, body).then((resp) => {
-          let datum = resp.data as RegisterResponse;
-          if (datum.status === "success") {
-              message.success(datum.message);
-          }else {
-              message.error(datum.message);
-          }
-          history.push('/account/login');
-          props.toggleLoading();
-      }).catch(() => {
-          message.error('Failed to connect to server, Check internet!')
-          props.toggleLoading();
-      })
-  };
 
 
-export default function signup() {
     return (
       <div className="app">
         <div className="flex items-center min-h-screen p-6 bg-gray-50 dark:bg-gray-900">
@@ -52,6 +41,7 @@ export default function signup() {
                   </h1>
                   <p  className="mb-4  fon text-center    font-semibold font-weight-100 ">Enter your details below to get started</p>
                   <div className="w-5/5 mx-auto">
+                  <form onSubmit={handleSubmit(onSubmit)}>
                     <div className="flex items-center bg-white rounded  mb-4">
                         <span className="px-3">
                           <svg className="fill-current text-gray-400 w-4 h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
@@ -108,6 +98,7 @@ export default function signup() {
                           Login</Link>
                         </span>
                     </p>
+                    </form>
                   </div>
               </div>
             </div>
@@ -115,3 +106,5 @@ export default function signup() {
       </div>
     )
 }
+
+export default (Signup);
