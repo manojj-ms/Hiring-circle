@@ -4,9 +4,14 @@ import { useForm } from 'react-hook-form';
 import React from 'react'
 import { Link } from 'react-router-dom'
 import { useHistory } from "react-router-dom";
+import SignupRequest from '../../interfaces/requests/auth/signup';
+import SignupResponse from '../../interfaces/responses/auth/signup';
+import { connect } from 'react-redux';
+import { toggleLoading } from '../../state/slice/auth';
 
 
 
+ 
 
 
 
@@ -15,20 +20,28 @@ const Signup= () => {
        const history = useHistory()
        const onSubmit = (values) => {
         const body = {
-                  name: values.name,
+                  uen: values.uen,
                   email: values.email,
-                  company_name: values.store_name,
+                  company_name: values.company_name,
                   password: values.password,
               };
+        props.toggleLoading();      
         axios.post(`http://127.0.0.1:8000/api/authenticate/signup`, body)
             .then(res => {
-              console.log(res);
-              console.log(res.data);
-             {/*console.log(values);*/}
-              history.push('/auth/login');
-            })
-        
-      }
+              let datum = resp.data as SignupResponse;
+              if (datum.status === "success") {
+                  message.success(datum.message);
+              }else {
+                  message.error(datum.message);
+              }
+              history.push('/account/login');
+              props.toggleLoading();
+          }).catch(() => {
+              message.error('Failed to connect to server, Check internet!')
+              props.toggleLoading();
+          })
+      };
+  
 
 
     return (
@@ -48,7 +61,7 @@ const Signup= () => {
                               <path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clip-rule="evenodd" />
                           </svg>
                         </span>
-                        <input className="block w-full mt-1 p-3 text-xs font-semibold font-weight-100 rounded text-gray-700 dark:text-gray-200 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:text-gray-300 dark:focus:shadow-outline-gray form-input" type="text" name="UEN" placeholder="UEN" />
+                        <input className="block w-full mt-1 p-3 text-xs font-semibold font-weight-100 rounded text-gray-700 dark:text-gray-200 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:text-gray-300 dark:focus:shadow-outline-gray form-input" type="text" name="uen" placeholder="UEN" />
                     </div>
                     <div className="flex items-center bg-white rounded  mb-4">
                         <span className="px-3">
@@ -56,7 +69,7 @@ const Signup= () => {
                               <path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clip-rule="evenodd" />
                           </svg>
                         </span>
-                        <input className="block w-full mt-1 p-3 text-xs font-semibold font-weight-100 rounded text-gray-700 dark:text-gray-200 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:text-gray-300 dark:focus:shadow-outline-gray form-input" type="text" name="Company Name" placeholder="Company Name" />
+                        <input className="block w-full mt-1 p-3 text-xs font-semibold font-weight-100 rounded text-gray-700 dark:text-gray-200 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:text-gray-300 dark:focus:shadow-outline-gray form-input" type="text" name="company_name" placeholder="Company Name" />
                     </div>
                     <div className="flex items-center bg-white rounded  mb-4">
                         <span className="px-3">
