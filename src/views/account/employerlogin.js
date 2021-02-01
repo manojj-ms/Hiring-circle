@@ -6,7 +6,7 @@ import React  from 'react';
 
 
 
-const Login= () => {
+const EmployerLogin= () => {
   
         
     return (
@@ -58,4 +58,4 @@ const Login= () => {
     )
 }
 
-export default(Login);
+export default(EmployerLogin);

@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import  Login  from "./views/account/login";
+import  Login  from "./views/account/employerlogin";
 import  Signup  from "./views/account/signup";  
 import  Employeelogin  from "./views/account/employeelogin";
   
@@ -32,7 +32,7 @@ export default class App extends Component {
         <Router>
           <Switch>
           {/*Authentication*/}
-            <Route path='/login' component={Login} />
+            <Route path='/employerlogin' component={Login} />
             <Route path='/signup' component={Signup} />
             <Route path='/employeelogin' component={Employeelogin} />
 
