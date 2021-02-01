@@ -1,8 +1,12 @@
 import React, { Component } from 'react'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import {  Login, Signup, Employeelogin } from "./views/views";  
-import {  Leaverequest, Leavehistory, Menu, Presence, } from "./views/views";  
-
+import  Login  from "./views/auth/login";
+import  Signup  from "./views/auth/signup";  
+import  Employeelogin  from "./views/auth/employeelogin";
+import  Leaverequest  from "./views/employee/leaverequest";  
+import  Leavehistory  from "./views/employee/leavehistory";
+import  Presence  from "./views/employee/presence";
+import  Menu  from "./views/employee/menu";
 
 
 

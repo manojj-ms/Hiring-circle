@@ -1,42 +1,14 @@
- import React, { useEffect, useState } from 'react';
+import React  from 'react';
  
  import { Link } from 'react-router-dom';
- import { useForm } from "react-hook-form";
- import { useHistory } from "react-router-dom";
- import axios from 'axios';
 
-import LoginRequest from '../../interfaces/requests/auth/login';
-import LoginResponse from '../../interfaces/responses/auth/login';
-import { toggleLoading, setProfile } from '../../state/slice/auth';
+
+
 
 
 const Login= () => {
-  const { handleSubmit} = useForm();
-       const history = useHistory()
-
-       useEffect(() => {
-        if(params.message) {
-            message.info(JSON.parse(params.message).message, 15000)
-        }
-    }, [params])
-       const onSubmit = (values) => {
-        const body:LoginRequest = {
-          email: values.email.toLowerCase(),
-          password: values.password,
-          role: role || 'employee'
-      };
-        axios.post(`http://127.0.0.1:8000/api/authenticate/login`, body)
-            .then(res => {
-              console.log(res);
-              console.log(res.data);
-              history.push('employer/tabs/ ehome');
-             {/*console.log(values);*/}
-              
-            })
+  
         
-      }
- 
-
     return (
       <div className="app">
         <div className="flex items-center min-h-screen p-6 bg-gray-50 dark:bg-gray-900">
@@ -47,7 +19,7 @@ const Login= () => {
                   </h1>
                   <p className="mb-4  text-center fon text-gray-700 dark font-semibold font-weight-700  ">Sign in to continue</p>
                   <div className="w-5/5 mx-auto">
-                  <form onSubmit={handleSubmit(onSubmit)}>
+                  <form >
                     <div className="flex items-center bg-white rounded  mb-4">
                         <span className="px-3">
                           <svg className="fill-current text-gray-400 w-4 h-4" xmlns="" viewBox="0 0 20 20">

@@ -1,46 +1,9 @@
-// import React, { useState } from 'react';
-import axios from 'axios';
-import { useForm } from 'react-hook-form';
 import React from 'react'
 import { Link } from 'react-router-dom'
-import { useHistory } from "react-router-dom";
-import SignupRequest from '../../interfaces/requests/auth/signup';
-import SignupResponse from '../../interfaces/responses/auth/signup';
-import { connect } from 'react-redux';
-import { toggleLoading } from '../../state/slice/auth';
-
-
-
- 
-
 
 
 const Signup= () => {
-  const { handleSubmit} = useForm();
-       const history = useHistory()
-       const onSubmit = (values) => {
-        const body = {
-                  uen: values.uen,
-                  email: values.email,
-                  company_name: values.company_name,
-                  password: values.password,
-              };
-        props.toggleLoading();      
-        axios.post(`http://127.0.0.1:8000/api/authenticate/signup`, body)
-            .then(res => {
-              let datum = resp.data as SignupResponse;
-              if (datum.status === "success") {
-                  message.success(datum.message);
-              }else {
-                  message.error(datum.message);
-              }
-              history.push('/account/login');
-              props.toggleLoading();
-          }).catch(() => {
-              message.error('Failed to connect to server, Check internet!')
-              props.toggleLoading();
-          })
-      };
+  
   
 
 
@@ -54,7 +17,7 @@ const Signup= () => {
                   </h1>
                   <p  className="mb-4  fon text-center    font-semibold font-weight-100 ">Enter your details below to get started</p>
                   <div className="w-5/5 mx-auto">
-                  <form onSubmit={handleSubmit(onSubmit)}>
+                  <form>
                     <div className="flex items-center bg-white rounded  mb-4">
                         <span className="px-3">
                           <svg className="fill-current text-gray-400 w-4 h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">

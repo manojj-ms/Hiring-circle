@@ -1,30 +1,10 @@
 import React from 'react'
-import { Link } from 'react-router-dom';
-import { useForm } from "react-hook-form";
-import { useHistory } from "react-router-dom";
-import axios from 'axios'
+
 
 
 
 const Employeelogin= () => {
-  const { handleSubmit} = useForm();
-       const history = useHistory()
-       const onSubmit = (values) => {
-        const body = {
-                  
-                  email: values.email,
-                 
-                  password: values.password,
-              };
-        axios.post(`http://127.0.0.1:8000/api/authenticate/employeelogin`, body)
-            .then(res => {
-              console.log(res);
-              console.log(res.data);
-             {/*console.log(values);*/}
-              history.push('/auth/login');
-            })
-        
-      }
+  
  
 
 
@@ -38,7 +18,7 @@ const Employeelogin= () => {
               </h1>
               <p className="mb-9 mt-1  text-center text-xs text-gray-700 dark font-semibold font-weight-700  ">Sign in to continue</p>
               <div className="w-5/5 mx-auto">
-              <form onSubmit={handleSubmit(onSubmit)}>
+              <form>
                   <div className="flex items-center bg-white rounded  mb-4">
                     <span className="px-3">
                         <svg className="fill-current text-gray-400 w-4 h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
