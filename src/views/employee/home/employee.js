@@ -1,6 +1,6 @@
-import React from 'react'
+import React from 'react';
 
-export default function menu() {
+const Employee = () => {
     return (
         <div className="bg-gray-200 dark:bg-gray-200">
             
@@ -149,3 +149,5 @@ export default function menu() {
         </div>
     )
 }
+
+export default Employee;

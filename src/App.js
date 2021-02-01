@@ -1,21 +1,28 @@
 import React, { Component } from 'react'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import  Login  from "./views/auth/login";
-import  Signup  from "./views/auth/signup";  
-import  Employeelogin  from "./views/auth/employeelogin";
-import  Leaverequest  from "./views/employee/leaverequest";  
-import  Leavehistory  from "./views/employee/leavehistory";
-import  Presence  from "./views/employee/presence";
-import  Menu  from "./views/employee/menu";
+import  Login  from "./views/account/login";
+import  Signup  from "./views/account/signup";  
+import  Employeelogin  from "./views/account/employeelogin";
+  
+import  Leaverequest  from "./views/employee/leave-application/leaverequest";
+import  EmployeeLeavehistory  from "./views/employer/leave-application/eeleavehistory";
+import  EmployerProfile  from "./views/employer/profile/profile";
+import  EmployeeProfile  from "./views/employee/profile/profile";
+import  EmployeeReview  from "./views/employee/review/view";
+import  EmployerReview  from "./views/employer/review/aboutemployee";
+import  PostJob  from "./views/employer/jobs/postjob";
+import  ApplyJob  from "./views/employee/jobs/applyjob";
+import  Payroll  from "./views/employee/payroll/view";
+import  CheckIn  from "./views/employee/checkin-out/checkin";
+import  CheckOut  from "./views/employee/checkin-out/checkout";
+import  Attendance  from "./views/employer/attendance/Employeeattendance";
+import  GeneratePayroll  from "./views/employer/payroll/generate";
+import  Employee  from "./views/employee/home/employee";
+import  Employer  from "./views/employer/home/employer";
 
 
 
-import EHome from './views/employer/tabs/ehome';
-import EJobs from './views/employer/tabs/ejobs';
-import Employees from './views/employer/tabs/employees';
-import EProfile from './views/employer/tabs/eprofile';
-import EReviews from './views/employer/tabs/ereviews';
-import TabLayout from './layouts/tabs';
+
 
 
 export default class App extends Component {
@@ -24,30 +31,35 @@ export default class App extends Component {
       <div>
         <Router>
           <Switch>
+          {/*Authentication*/}
             <Route path='/login' component={Login} />
             <Route path='/signup' component={Signup} />
             <Route path='/employeelogin' component={Employeelogin} />
 
             
-
-            <TabLayout path="/employer/:path?">
-              <Route path="/employer/home" component={EHome} />
-              <Route path="/employer/jobs" component={EJobs} />
-              <Route path="/employer/employees" component={Employees} />
-              <Route path="/employer/profile" component={EProfile} />
-              <Route path="/employer/reviews" component={EReviews} />
-            </TabLayout>
-
-            
+          
+          {/*Employer*/}
+          <Route path="/employer/profile" component={EmployerProfile} />
+          <Route path="/employer/leavehistory" component={EmployeeLeavehistory} />
+          <Route path="/employer/review" component={EmployerReview} />  
+          <Route path="/employer/jobs" component={PostJob} />
+          <Route path="/employer/payroll" component={GeneratePayroll} />
+          <Route path="/employer/attendance" component={Attendance}/>
+          <Route path="/employer" component={Employer}/> 
+          
+          
+           {/*Employee*/}
+           <Route path="/employee/profile" component={EmployeeProfile} />
            <Route path="/employee/leaverequest" component={Leaverequest} />
-           <Route path="/employee/leavehistory" component={Leavehistory} />
-           <Route path="/employee/presence" component={Presence} />
-           <Route path="/employee/menu" component={Menu} />
-
+           <Route path="/employee/review" component={EmployeeReview} />  
+           <Route path="/employee/jobs" component={ApplyJob} />             
+           <Route path="/employee/payroll" component={Payroll} />
+           <Route path="/employee/checkin" component={CheckIn}/>
+           <Route path="/employee/checkout" component={CheckOut}/>
+           <Route path="/employee" component={Employee}/>
            
 
-            
-          </Switch>
+        </Switch>
         </Router>
       </div>
     )

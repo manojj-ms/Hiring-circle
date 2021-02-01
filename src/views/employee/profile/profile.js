@@ -2,7 +2,7 @@ import React from 'react';
 
 const EProfile = () => {
     return (
-        <p>EProfile</p>
+        <p>EmployeeProfile</p>
     )
 }
 
