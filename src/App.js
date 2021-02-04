@@ -12,6 +12,7 @@ import  EmployeeReview  from "./views/employee/review/view";
 import  EmployerReview  from "./views/employer/review/aboutemployee";
 import  PostJob  from "./views/employer/jobs/postjob";
 import  ApplyJob  from "./views/employee/jobs/applyjob";
+import  SearchJob  from "./views/employee/jobs/searchjob";
 import  Payroll  from "./views/employee/payroll/view";
 import  AllHistory  from "./views/employee/leave-application/allhistory";
 import  ApplyLeave  from "./views/employee/leave-application/applyleave";
@@ -56,7 +57,8 @@ export default class App extends Component {
            <Route path="/employee/allhistory" component={AllHistory} />
            <Route path="/employee/applyleave" component={ApplyLeave} />
            <Route path="/employee/review" component={EmployeeReview} />  
-           <Route path="/employee/jobs" component={ApplyJob} />             
+           <Route path="/employee/applyjobs" component={ApplyJob} />
+           <Route path="/employee/searchjobs" component={SearchJob} />             
            <Route path="/employee/payroll" component={Payroll} />
            <Route path="/employee/checkin" component={CheckIn}/>
            <Route path="/employee/checkout" component={CheckOut}/>
