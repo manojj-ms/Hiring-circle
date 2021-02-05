@@ -2,10 +2,10 @@ import React from 'react';
 
 const Employee = () => {
     return (
-        <div className="bg-gray-200 dark:bg-gray-200">
+        <div className="bg-white">
             
-            <div className=" bg-gray-200 dark:bg-gray-200  w-screen ">
-<div className="px-5 py-4 bg-white dark:bg-gray-900 relative shadow rounded-xl max-h-screen h-40 rounded-b-3xl  max-w-lg">
+            <div className=" bg-gray-200 dark:bg-gray-200 w-screen p-3">
+<div className="px-5 py-4 bg-white dark:bg-gray-900 relative shadow rounded-2xl max-h-screen h-40 rounded-b-3xl  max-w-lg">
     <div className="flex justify-between mb-4">
       <div className="flex items-center">
       <div className="w-9 h-9 flex items-center justify-center bg-purple-600 rounded-full" >
@@ -42,20 +42,20 @@ const Employee = () => {
     <div className="flex justify-between items-center mt-5">
     <div className="flex ">
      
-      <span className="ml-1 text-gray-500 dark:text-gray-400 text-xs  font-light">How are you toaday?</span>
+      <span className="ml-1 text-gray-500 dark:text-gray-400 text-xs  font-light">How are you today ? </span>
     </div>  
     
     </div>
-    <div className="ml-1 flex justify-start items-center text-xs font-semibold text-gray-500 dark:text-gray-400 ">Check In/Out</div>
+    <div className="ml-1 flex justify-start items-center text-xs font-semibold text-gray-500 dark:text-gray-400 ">CheckIn/CheckOut</div>
     <div className="">
     <div className="">
   
   <div className="flex items-center  relative  justify-center">
   
-  <div className="w-full  absolute  top-2 left-0 right-6 -bottom-14">
-      <div className="bg-blue-900 relative shadow-xl border-4 border-blue-900 rounded-2xl  py-3">
+  <div className="w-full  absolute  top-6 left-0 right-7 -bottom-14">
+      <div className="bg-blue-900 relative shadow-xl border-4 border-blue-900 rounded-2xl p-2  py-5">
          
-          <div className="w-full mb-3 -mt-3  p-1  h-20 bg-white   rounded-2xl  flex-wrap items-center justify-around">
+          <div className="w-full mb-3 -mt-3  px-2  h-20 bg-white   rounded-2xl  flex-wrap items-center justify-around">
             <div className="flex items-center justify-start ml-3">
               <span className="text-3xl font-semibold mr-2 " >5</span>  <span className="text-xl mr-4 " >Monday</span><span className="text-xl mr-3 " >  2020</span>
 
@@ -97,7 +97,7 @@ const Employee = () => {
             <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" ></path></svg>
           </div>
           <div className="flex flex-col flex-grow ml-4">
-            <div className="text-sm mt-3 font-semibold text-gray-500">Checkin / Checkout</div>
+            <div className="text-sm mt-3 font-semibold text-gray-500">CheckIn/CheckOut</div>
             
           </div>
         </div>
