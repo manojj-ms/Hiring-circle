@@ -1,5 +1,5 @@
 import React from 'react';
-
+import { Link } from 'react-router-dom';
 const SearchJob = () => {
     return (
         <div className="bg-white p-2">
@@ -21,7 +21,7 @@ const SearchJob = () => {
     </div>
     <div class="flex-grow p-3">
       <div class="font-semibold text-gray-700">
-        Facebook
+        <Link to='/employee/applyjobs'>Facebook</Link>
       </div>
       <div class="text-sm text-gray-500">
         Full Time UI designer . $8k - UK.
@@ -39,7 +39,7 @@ const SearchJob = () => {
     </div>
     <div class="flex-grow p-3">
       <div class="font-semibold text-gray-700">
-        InfoTech
+        <Link to='/employee/applyjobs'>InfoTech</Link>
       </div>
       <div class="text-sm text-gray-500">
         Full Time UI designer . $8k - UK.
@@ -57,7 +57,7 @@ const SearchJob = () => {
     </div>
     <div class="flex-grow p-3">
       <div class="font-semibold text-gray-700">
-        Google
+        <Link to='/employee/applyjobs'>Google</Link>
       </div>
       <div class="text-sm text-gray-500">
          Part time UI designer . $9k - US.
@@ -75,7 +75,7 @@ const SearchJob = () => {
     </div>
     <div class="flex-grow p-3">
       <div class="font-semibold text-gray-700">
-        TCS
+        <Link to='/employee/applyjobs'>TCS</Link>
       </div>
       <div class="text-sm text-gray-500">
         Fulltime DB Engineer . $5k - UK.
@@ -93,7 +93,7 @@ const SearchJob = () => {
     </div>
     <div class="flex-grow p-3">
       <div class="font-semibold text-gray-700">
-        ZOHO
+        <Link to='/employee/applyjobs'>ZOHO</Link>
       </div>
       <div class="text-sm text-gray-500">
         Full Time ROR devoloper . $9k - SI.

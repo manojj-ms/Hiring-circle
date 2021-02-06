@@ -1,5 +1,5 @@
 import React from 'react';
-
+import { Link } from 'react-router-dom';
 const Employee = () => {
     return (
         <div className="bg-white">
@@ -97,7 +97,7 @@ const Employee = () => {
             <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" ></path></svg>
           </div>
           <div className="flex flex-col flex-grow ml-4">
-            <div className="text-sm mt-3 font-semibold text-gray-500">CheckIn/CheckOut</div>
+            <div className="text-sm mt-3 font-semibold text-gray-500"><Link to ='/employee/checkin'>CheckIn</Link><Link to ='/employee/checkout'>/CheckOut</Link></div>
             
           </div>
         </div>
@@ -136,13 +136,27 @@ const Employee = () => {
 </svg>
           </div>
           <div className="flex flex-col flex-grow ml-4">
-            <div className="text-sm mt-3 font-semibold text-gray-500">Leave Request</div>
+            <div className="text-sm mt-3 font-semibold text-gray-500"><Link to='/employee/leavehistory'>Leave Result</Link>/<Link to='/employee/allhistory'>Leave History</Link></div>
             
           </div>
         </div>
       </div>
      
     </div>
+    <div className="col-span-12 sm:col-span-6 md:col-span-3">
+        <div className="flex flex-row bg-white shadow-sm rounded-xl p-3 mt-4">
+          <div className="flex items-center justify-center flex-shrink-0 h-10 w-10 rounded-xl bg-green-300 ">
+          <svg className="w-4 h-4 text-black" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1" />
+</svg>
+          </div>
+          <div className="flex flex-col flex-grow ml-4">
+            <div className="text-sm mt-3 font-semibold text-gray-500"><Link to='/employee/searchjobs'>Jobs</Link></div>
+            
+          </div>
+        </div>
+      </div>
+     
   </div>
 </div>
 </div>
