@@ -19,6 +19,7 @@ import  ApplyLeave  from "./views/employee/leave-application/applyleave";
 import  CheckIn  from "./views/employee/checkin-out/checkin";
 import  CheckOut  from "./views/employee/checkin-out/checkout";
 import  Attendance  from "./views/employer/attendance/Employeeattendance";
+import  List  from "./views/employer/attendance/employeeslist";
 import  GeneratePayroll  from "./views/employer/payroll/generate";
 import  Employee  from "./views/employee/home/employee";
 import  Employer  from "./views/employer/home/employer";
@@ -48,6 +49,7 @@ export default class App extends Component {
           <Route path="/employer/jobs" component={PostJob} />
           <Route path="/employer/payroll" component={GeneratePayroll} />
           <Route path="/employer/attendance" component={Attendance}/>
+          <Route path="/employer/employeeslist" component={List}/>
           <Route path="/employer" component={Employer}/> 
           
           
