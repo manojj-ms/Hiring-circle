@@ -41,7 +41,7 @@ const EmployerLogin= () => {
                           Forgot your password?
                         </p>
                     </div>
-                    <button className="block w-full px-4 py-2 mt-6 border-radius: 100px; font-semibold font-weight-400 text-sm font-medium leading-5 text-center text-white transition-colors duration-150 bg-purple-600 border border-transparent rounded-full bg-purple-600 hover:bg-purple-700 focus:outline-none focus:shadow-outline-purple"><Link to='/employee'>Sign in</Link></button>
+                    <button className="block w-full px-4 py-2 mt-6 border-radius: 100px; font-semibold font-weight-400 text-sm font-medium leading-5 text-center text-white transition-colors duration-150 bg-purple-600 border border-transparent rounded-full bg-purple-600 hover:bg-purple-700 focus:outline-none focus:shadow-outline-purple"><Link to='/employer'>Sign in</Link></button>
                     <p className="p-6 fon font-semibold font-weight-700  no-underline  hover:underline text-center">
                         Don't have an account?
                         <span className="text-purple-500 ml-2" >

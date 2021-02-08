@@ -2,7 +2,7 @@ import React from 'react';
 
 const PostJob = () => {
     return (
-        <p>Post the Part-time Jobs</p>
+         <p className="text-center font-extrabold text-2xl pt-4">Post Jobs</p>
         
     )
 }

@@ -2,7 +2,7 @@ import React from 'react';
 
 const Attendance = () => {
     return (
-        <p>Check the Employee Attendance</p>
+        <p className="text-center font-extrabold text-2xl pt-4">Attendance</p>
     )
 }
 
